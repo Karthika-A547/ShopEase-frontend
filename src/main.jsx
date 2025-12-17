@@ -30,7 +30,7 @@ const Main = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/products");
+        const res = await axios.get("https://shopease-backend-csp7.onrender.com/products");
         setProducts(res.data.products || res.data);
       } catch (err) {
         console.error("Failed to fetch products:", err);
