@@ -60,7 +60,7 @@ const Cart = ({ CartProduct, setCartProduct }) => {
     const product = CartProduct[index];
 
     await axios.put(
-      "http://localhost:3000/carts",
+      "https://shopease-backend-csp7.onrender.com/carts",
       { productId: product.id, quantity: qty },
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -76,7 +76,7 @@ const Cart = ({ CartProduct, setCartProduct }) => {
 
   // ---------------- REMOVE ----------------
   const handleRemove = async (id, index) => {
-    await axios.delete(`http://localhost:3000/carts/${id}`, {
+    await axios.delete(`https://shopease-backend-csp7.onrender.com/carts/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -106,7 +106,7 @@ const Cart = ({ CartProduct, setCartProduct }) => {
       }
 
       await axios.post(
-        "http://localhost:3000/orders",
+        "https://shopease-backend-csp7.onrender.com/orders",
         { shippingAddress, paymentMethod },
         { headers: { Authorization: `Bearer ${token}` } }
       );
