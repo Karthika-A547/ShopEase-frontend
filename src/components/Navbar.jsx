@@ -1,6 +1,3 @@
-
-
-
 import { Link, useNavigate } from "react-router";
 
 const Navbar = () => {

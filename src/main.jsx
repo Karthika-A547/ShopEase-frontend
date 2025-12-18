@@ -15,7 +15,6 @@ import Cart from "./components/Cart.jsx";
 import Orders from "./components/Orders.jsx";
 import Admin from "./components/Admin.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
-// import About from "./components/About.jsx";
 import LoginForm from "./components/LoginForm.jsx";
 import RegistrationForm from "./components/RegistrationForm.jsx";
 
@@ -65,7 +64,7 @@ const addToCart = async (product) => {
 
   try {
     const res = await axios.post(
-      "http://localhost:3000/carts",
+      "https://shopease-backend-csp7.onrender.com/carts",
       { productId: product._id, quantity: 1 },
       { headers: { Authorization: `Bearer ${token}` } }
     );

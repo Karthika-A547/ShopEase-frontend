@@ -1,8 +1,4 @@
 
-
-
-
-
 import { useParams } from "react-router";
 
 const ProductDetails = ({ products, addToCart }) => {
